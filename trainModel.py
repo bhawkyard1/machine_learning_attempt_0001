@@ -46,7 +46,7 @@ def run():
     vocab_size = len(vocab),
     embedding_dim=embedding_dim,
     rnn_units=rnn_units,
-    batch_size=BATCH_SIZE)
+    batch_size=common.BATCH_SIZE)
 
   def loss(labels, logits):
     return tf.keras.losses.sparse_categorical_crossentropy(labels, logits, from_logits=True)
