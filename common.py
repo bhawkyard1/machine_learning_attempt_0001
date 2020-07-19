@@ -5,7 +5,10 @@ BATCH_SIZE = 64
 BUFFER_SIZE = 10000
 CHECKPOINTS_DIR = os.path.join(os.getcwd(), "checkpoints")
 CHECKPOINTS_PREFIX = os.path.join(CHECKPOINTS_DIR, "checkpoint_{epoch}")
-DATA_PATH = "all.txt"
+DATA_PATH = os.path.join(
+  os.path.dirname(__file__),
+  "all.txt"
+)
 EPOCHS = 15
 SEQ_LEN = 100
 
