@@ -4,7 +4,7 @@ import tensorflow as tf
 BATCH_SIZE = 64
 BUFFER_SIZE = 10000
 CHECKPOINTS_DIR = os.path.join(os.getcwd(), "checkpoints")
-CHECKPOINTS_PREFIX = os.path.join(checkpoint_dir, "checkpoint_{epoch}")
+CHECKPOINTS_PREFIX = os.path.join(CHECKPOINTS_DIR, "checkpoint_{epoch}")
 DATA_PATH = "all.txt"
 EPOCHS = 15
 SEQ_LEN = 100
