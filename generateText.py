@@ -4,7 +4,7 @@ import random
 
 import tensorflow as tf
 
-import common
+from . import common
 
 def generate_text(model, start_string):
   # Evaluation step (generating text using the learned model)

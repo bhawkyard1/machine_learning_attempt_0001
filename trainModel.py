@@ -4,7 +4,7 @@ import random
 
 import tensorflow as tf
 
-import common
+from . import common
 
 def run():
   print(f"Using tensorflow {tf.__version__}")
