@@ -55,7 +55,7 @@ def run():
   model.compile(optimizer="adam", loss=loss)
 
   checkpoint_callback=tf.keras.callbacks.ModelCheckpoint(
-      filepath=common.CHECKPOINT_PREFIX,
+      filepath=common.CHECKPOINTS_PREFIX,
       save_weights_only=True
   )
 
