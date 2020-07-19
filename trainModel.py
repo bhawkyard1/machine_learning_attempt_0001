@@ -8,6 +8,7 @@ from . import common
 
 def run():
   print(f"Using tensorflow {tf.__version__}")
+  print(f"Reading data from {common.DATA_PATH}...")
 
   text = open(common.DATA_PATH, "rb").read().decode(encoding="utf-8")
   vocab = sorted(set(text))
