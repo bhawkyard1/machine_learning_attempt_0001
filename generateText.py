@@ -43,7 +43,7 @@ def generate_text(model, start_string):
 
   return (start_string + "".join(text_generated))
 
-def get_start_string():
+def get_start_string(text):
   sentence = random.choice(text.split("."))
   words = sentence.split(" ")
   return " ".join(words[:min(len(words) - 1, 3)])
@@ -70,7 +70,7 @@ def run():
   model.load_weights(tf.train.latest_checkpoint(common.CHECKPOINTS_DIR))
   model.build(tf.TensorShape([1, None]))
 
-  start_string = get_start_string()
+  start_string = get_start_string(text)
   print("START:",start_string,"\n")
   print(
     generate_text(
